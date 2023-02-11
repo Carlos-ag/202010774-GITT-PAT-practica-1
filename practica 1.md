@@ -8,6 +8,8 @@
 Lo primero que he hecho es un fork fork sobre el [repositorio](https://github.com/gitt-3-pat/hello-world):
 ![Fork](assets/fork.png)
 
+El comando *fork* nos permite crear una copia de un repositorio en nuestra cuenta personal. Con esta copia, podemos realizar cambios en el código sin afectar al repositorio original, así podemos modificar código que ha hecho otra persona sin tener que pedirle permiso.
+
 ## **GIT:**
 
 * **Git clone:** Este comando se utiliza para clonar un repositorio remoto a un directorio local en el sistema de archivos. Se utiliza para descargar todos los archivos y historial de versiones de un repositorio en una computadora local.
@@ -104,11 +106,29 @@ Lo primero que he hecho es un fork fork sobre el [repositorio](https://github.co
 * **git branch -l** para ver todas las ramas que tengo en el repositorio:
     ![Git branch](assets/branch.png)
 * **git branch -d** para borrar ramas:
-![Git branch -d](assets/git_delete_branch.png)
+    ![Git branch -d](assets/git_delete_branch.png)
 
-* Voy a añadir un par de comandos que son los que suelo utilizar más a menudo yo. Cuando trabajo con git (seguro que hay prácticas mucho mejores pero me he acostumbrado así), lo que suelo hacer es crearme una nueva rama donde hago ahi los cambios, después de haber añadido todos los cambios hago un merge con la rama main y ya luego los pusheo:
+* **git pull** para traer los cambios del repositorio remoto:
+![Git pull](assets/pull.png)
 
-![Git mis comandos](assets/mis_comandos.png)
+* **git log** es una herramienta muy útil en Git que permite ver el historial de cambios en un repositorio. También puedes ver información detallada sobre cada commit en tu repositorio, incluyendo el autor, la fecha, el mensaje de commit y el hash de identificación único (SHA) del commit:
+    ![Git log](assets/log.png)
+
+* **git revert** para revertir un commit. Es muy útil cuando se ha hecho un commit y se ha subido a un repositorio remoto y luego se quiere deshacer ese commit. Necesitamos saber el hash del commit que queremos revertir. Para ello usamos el comando **git log** que acabamos de explicar. Por ejemplo, en el caso de la captura de arriba, vamos a revert el cambio *45518ffbf4cd7b793abf7ab5c65ccf466f2a3267*:
+
+    ![Git revert](assets/revert.png)
+
+
+* Voy a añadir un par de comandos que son los que suelo utilizar más a menudo yo. Cuando trabajo con git (seguro que hay prácticas mucho mejores pero me he acostumbrado así), lo que suelo hacer es crearme una nueva rama donde hago ahi los cambios, después de haber añadido todos los cambios hago un merge con la rama main y ya luego los pusheo. Por tanto los comando que más uso yo son:
+    - **git branch nombre_rama**: para crear la nueva rama
+    - **git switch nombre_rama**: para cambiar a la rama
+    - **git add .**: para añadir todos los cambios
+    - **git commit -m "mensaje"**: para hacer el commit
+    - **git switch main**: para cambiar a la rama main
+    - **git merge nombre_rama**: para hacer el merge con la rama main
+    - **git push origin main**: para hacer el push de los cambios
+
+    ![Git mis comandos](assets/mis_comandos.png)
 
 
 ## **Instalaciones en el equipo:**
